@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #000;
+  border-color: #3b3b3b;
+  user-select: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+/* ModelView.module.css */
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.container-large {
+  right: 0;
+}
+
+.container-hidden {
+  right: -100%;
+}
+
+.image-hover {
+  width: 550px;
+  height: 550px;
+  margin: 25px;
+  padding: 2%;
+  border-radius: 10%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 500px) {
+  .image-hover {
+    width: 100px;
+    /* Make images take full width of their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 10px 0;
+    /* Adjust margin to space images vertically */
+  }
+
+  /* Make sure the flex container adjusts layout */
+  div {
+    flex-direction: column;
+    /* Stack images vertically */
+    align-items: center;
+    /* Center images horizontally in the column layout */
+  }
+}
+
+.textR {
+  font-size: 1.2rem;
+  transition: transform 0.5s ease;
+  color: grey;
+}
+
+.textR2 {
+  font-size: 1.2rem;
+  transition: transform 0.5s ease;
+  color: grey;
+}
+
+.textR:hover {
+  color: #f0f0f0;
+  /* font-size: 1.5rem; */
+  transform: scale(1.25);
+}
+
+.textR2:hover {
+  color: #f0f0f0;
+  /* font-size: 1.5rem; */
+  transform: scale(1.1);
+}
+
+.textR span {
+  color: rgb(255, 255, 255);
+  /* transition: color 0.3s ease; */
+}
+
+.textR2 span {
+  color: rgb(255, 255, 255);
+  /* transition: color 0.3s ease; */
+}
+
+.textR span:hover {
+  color: #ffcc00;
+  /* transition: color 0.3s ease; */
+}
+
+.textR2 span:hover {
+  color: #ffcc00;
+  /* transition: color 0.3s ease; */
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chip img {
+  max-width: 100%;
+  /* Make sure image doesn’t overflow the container */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+@media (max-width: 500px) {
+  #chip img {
+    width: 150px;
+    /* Adjust width for smaller screens */
+    height: 150px;
+    /* Adjust height for smaller screens */
+  }
+}
+/* 
+.hiw-title {
+  @apply text-4xl md:text-7xl font-semibold text-center
+}
+
+.hiw-subtitle {
+  @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center
+}
+
+.hiw-video {
+  @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden
+}
+
+.hiw-text-container {
+  @apply flex md:flex-row flex-col justify-between items-start gap-24
+}
+
+.hiw-text {
+  @apply text-gray text-xl font-normal md:font-semibold
+}
+
+.hiw-bigtext {
+  @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2
+} */
+
+.common-padding {
+  @apply sm:py-32 py-20 sm:px-10 px-5
+}
+
+/* 
+@media (minWidth: 640px) {
+  
+} */
+
+/* @layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+
+  .nav-height {
+    @apply h-[calc(100vh-60px)]
+  } */
+
+/* .btn {
+    @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue
+  } */
+
+/* .color-container {
+    @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur
+  }
+
+  .size-btn-container {
+    @apply flex items-center justify-center p-1 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1
+  }
+
+  .size-btn {
+    @apply w-10 h-10 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all
+  } */
+
+/* .common-padding {
+    @apply sm:py-32 py-20 sm:px-10 px-5
+  } */
+
+/* .section-heading {
+    @apply text-gray lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20
+  } */
+
+/* .feature-text {
+    @apply text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px]
+  }
+
+  .feature-text-container {
+    @apply w-full flex-center flex-col md:flex-row mt-10 md:mt-16 gap-5
+  }
+
+  .feature-video {
+    @apply w-full h-full object-cover object-center scale-150 opacity-0
+  }
+
+  .feature-video-container {
+    @apply w-full flex flex-col md:flex-row gap-5 items-center
+  } */
+
+/* .link {
+    @apply text-blue hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20
+  } */
+
+/* .control-btn {
+    @apply ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex-center
+  } */
+
+/* .hero-title {
+    @apply text-center font-semibold text-3xl text-gray-100 opacity-0 max-md:mb-10
+  }
+
+  .hiw-title {
+    @apply text-4xl md:text-7xl font-semibold text-center
+  }
+
+  .hiw-subtitle {
+    @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center
+  }
+
+  .hiw-video {
+    @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden
+  }
+
+  .hiw-text-container {
+    @apply flex md:flex-row flex-col justify-between items-start gap-24
+  }
+
+  .hiw-text {
+    @apply text-gray text-xl font-normal md:font-semibold
+  }
+
+  .hiw-bigtext {
+    @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2
+  }
+
+  .video-carousel_container {
+    @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]
+  }
+
+  .g_fadeIn {
+    @apply opacity-0 translate-y-[100px]
+  }
+} */
